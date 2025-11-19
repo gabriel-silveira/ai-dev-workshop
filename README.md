@@ -30,9 +30,25 @@ Temos diversos arquivos de exemplo nesta pasta. Você pode e deve modifica-los d
 | [react-developer.md](.claude/agents/react-developer.md) | Usado para desenvolvimento de código em React |
 | [code-reviewer.md](.claude/agents/code-reviewer.md) | Usado para revisão de código |
 | [research-agent.md](.claude/agents/research-agent.md) | Usado para pesquisa na web ou em outros codebases |
-| [test-engineer.md](.claude/agents/test-engineer.md) | Usado para desenvolvimento de testes |
-| [test-planner.md](.claude/agents/test-planner.md) | Usado para planejamento de testes |
+| [test-planner.md](.claude/agents/test-planner.md) | Usado para planejamento estratégico de cobertura de testes |
+| [test-engineer.md](.claude/agents/test-engineer.md) | Usado para escrever testes unitários e de componente (com mocks) |
+| [integration-test-engineer.md](.claude/agents/integration-test-engineer.md) | Usado para escrever testes de integração com APIs REST externas (chamadas reais, sem mocks) |
 | [metaspec-gate-keeper.md](.claude/agents/metaspec-gate-keeper.md) | Usado para verificação do código versus os metaspec do projeto |
+
+#### Diferenciação entre Agentes de Teste
+
+O framework oferece três agentes especializados em testes, cada um com um propósito distinto:
+
+- **test-planner**: Analisa o código e identifica lacunas de cobertura de testes. Recomenda quais testes devem ser escritos e com qual prioridade. Use quando precisar de uma visão estratégica da cobertura de testes.
+
+- **test-engineer**: Escreve testes unitários e de componente usando mocks. Foca em testar unidades de código isoladamente, validando comportamento e lógica interna. Use para testes de funções, classes e componentes.
+
+- **integration-test-engineer**: Escreve testes de integração fazendo chamadas reais a APIs externas (sem mocks). Valida que integrações com serviços externos funcionam corretamente em ambientes sandbox/staging. Use quando tiver código que se integra com APIs REST externas (pagamentos, autenticação, webhooks, etc.).
+
+**Quando usar cada agente:**
+- Planejamento de testes → `test-planner`
+- Testes unitários com mocks → `test-engineer`
+- Testes de integração com APIs reais → `integration-test-engineer`
 
 ### Agentes específicos para momento de PR
 
