@@ -32,6 +32,7 @@ Temos diversos arquivos de exemplo nesta pasta. Você pode e deve modifica-los d
 | [research-agent.md](.claude/agents/research-agent.md) | Usado para pesquisa na web ou em outros codebases |
 | [test-engineer.md](.claude/agents/test-engineer.md) | Usado para desenvolvimento de testes |
 | [test-planner.md](.claude/agents/test-planner.md) | Usado para planejamento de testes |
+| [integration-test-engineer.md](.claude/agents/integration-test-engineer.md) | Usado para escrever testes de integração com APIs REST externas |
 | [metaspec-gate-keeper.md](.claude/agents/metaspec-gate-keeper.md) | Usado para verificação do código versus os metaspec do projeto |
 
 ### Agentes específicos para momento de PR
